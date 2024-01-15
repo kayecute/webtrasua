@@ -1,0 +1,15 @@
+﻿@model List<WebTraSua.Models.ChiTietSanPham>
+
+<h2>Kết Quả Tìm Kiếm</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("ChiTietSanPham", "WebTraSua", new { id = item.MaSP })">
+                <strong>@item.TenSP</strong>
+            </a>
+            <br />
+        </li>
+    }
+</ul>
